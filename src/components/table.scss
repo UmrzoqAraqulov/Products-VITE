@@ -1,0 +1,132 @@
+/* Google fonts - Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* colors */
+$blue: rgba(79, 192, 210, 1);
+$dark-bg: rgba(0, 0, 0, 0.9);
+$light-bg: rgba(7, 7, 250, 0.674);
+$text: rgba(255, 255, 255, 0.9);
+
+/* body */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* links */
+.nfl a{
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+.nfl a {
+  color: $blue;
+}
+
+.nfl a:hover {
+  color: darken($blue, 20%);
+}
+
+/* wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 100px auto;
+  padding: 0;
+  background: $light-bg;
+  color: $text;
+  overflow: hidden;
+  position: relative;
+}
+
+/* lists */
+.row ul {
+  margin: 0;
+  padding: 0;
+}
+
+.row ul li {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  list-style: none;
+  display: inline-block;
+  width: 16%;
+  box-sizing: border-box;
+  @media only screen and (max-width: 767px) and (min-width: 480px) {
+    font-size: 13px;
+  }
+  @media only screen and (max-width: 479px) {
+    font-size: 13px;
+  }
+  &:nth-child(1){
+    text-align: center;
+    width: 10%;
+  }
+  &:nth-child(2){
+    width: 25%;
+  }
+}
+
+.row ul li {
+  padding: 5px 10px;
+}
+
+/* rows */
+.row {
+  padding: 10px 0px 15px;
+  height: 55px;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+  border-top: 1px solid darken($light-bg, 100%);
+}
+
+.row:hover {
+  background-color: lighten($dark-bg, 10%);
+  height: 80px;
+  @media only screen and (max-width: 767px) {
+    height: 85px;
+  }
+  @media only screen and (max-width: 359px) {
+    height: 105px;
+  }
+}
+.title {
+  padding: 20px 0 5px 0;
+  height: 70px;
+  font-size: 0;
+  background-color: $light-bg;
+  border-left: 3px solid lighten($light-bg, 100%);
+  ul li{
+    padding: 0;
+  }
+}
+.title:hover {
+  background-color: $light-bg;
+  height: 70px;
+  border-left: 3px solid lighten($light-bg, 100%);
+}
+
+.title-hide {
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nfl {
+  border-left: 3px solid darken($blue, 30%);
+}
+.nfl:hover {
+  border-left: 3px solid $blue;
+}
+
+/* row two - fadeOut */
+.row-fadeOut-wrapper {
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-out;
+  opacity: 1;
+}
+
